@@ -1,18 +1,18 @@
 #include <iostream>
 using namespace std;
 
-void funcs(string &s) {
-	for (int i = 0; i < s.length(); i++) {
-		if (s[i] == 'A' || s[i] == 'E' || s[i] == 'O' || s[i] == 'I' || s[i] == 'U' || s[i] == 'Y') {
-			s[i] = tolower(s[i]);
+void toLowerFunc(string &str) {
+	for (int i = 0; i < str.length(); i++) {
+		if (str[i] == 'A' || str[i] == 'E' || str[i] == 'O' || str[i] == 'I' || str[i] == 'U' || str[i] == 'Y') {
+			str[i] = tolower(str[i]);
 		}
 	}
 }
 
 int main() {
-	string s;
-	getline(cin, s);
-	funcs(s);
-	cout<<s<<endl;
+	string str;
+	getline(cin, str);
+	toLowerFunc(str);
+	cout << str << endl;
 	return 0;
 }
